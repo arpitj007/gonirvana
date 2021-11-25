@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, {usestate} from "react";
+import React, {useState} from "react";
 import { StyleSheet,
   Text,
   View,
@@ -12,8 +12,8 @@ import { StyleSheet,
 
 
 export default function App() {
-  const [email, setEmail] = usestate("");
-  const [password, setPassword] = usestate("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
@@ -23,7 +23,7 @@ export default function App() {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Email."
+          placeholder="Email"
           placeholderTextColor="#003f5c"
           onChangeText={(email) => setEmail(email)}
         />
@@ -32,7 +32,7 @@ export default function App() {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Password."
+          placeholder="Password"
           placeholderTextColor="#003f5c"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   },
 
   inputView: {
-    backgroundColor: "#FFC0CB",
+    backgroundColor: "#FFA500",
     borderRadius: 30,
     width: "70%",
     height: 45,
@@ -93,6 +93,6 @@ loginBtn: {
   alignItems: "center",
   justifyContent: "center",
   marginTop: 40,
-  backgroundColor: "#FF1493",
+  backgroundColor: "#ffefd8",
 },
 });
